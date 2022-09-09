@@ -14,12 +14,9 @@ under_root = Math.exp(x) - a **(3/2)
   if U <= 0
     print"U should be >=0!"
   elsif  under_root < 0
-    print "Under the root is a negative number!"
+    print "Under the root is a negative number or 0!"
   else
-    value_left_denominator = Math.sqrt(under_root)
-    if value_left_denominator == 0
-      print "Division by zero on the left!"
-    else
+      value_left_denominator = Math.sqrt(under_root)
       value_in_mod = ((Math.log(U) + 16.3) / value_left_denominator).abs
       value_left = Math.cos(value_in_mod) / Math.sin(value_in_mod)
 
@@ -31,6 +28,5 @@ under_root = Math.exp(x) - a **(3/2)
         result = value_left + value_right
         print "Result = " , result
       end
-    end
   end
 
